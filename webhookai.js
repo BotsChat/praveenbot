@@ -97,7 +97,7 @@ res.status(200).end();
           
           console.log('genrequery', query)
           
-          db.collection("movie_list_test_year_removed").find(query, [ { $sample: { size: 10 } } ],{Movie_Name: true, mgenre : true , rating_no:true,imdb_movie_poster:true,imurl : true, star_json:true}).limit(10).toArray(function(err, result) {
+          db.collection("movie_list_test_year_removed").find(query,{Movie_Name: true, mgenre : true , rating_no:true,imdb_movie_poster:true,imurl : true, star_json:true}).limit(10).toArray(function(err, result) {
             if (err) throw err;
            // console.log('result ',result);
           
